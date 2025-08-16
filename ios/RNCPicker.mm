@@ -131,6 +131,9 @@ numberOfRowsInComponent:(__unused NSInteger)component
   label.accessibilityIdentifier = _items[row][@"testID"];
     
   label.numberOfLines = _numberOfLines;
+  for (UIView *subView in self.subviews) {
+    subView.backgroundColor = [UIColor clearColor];
+  }
   
   return view;
 }
